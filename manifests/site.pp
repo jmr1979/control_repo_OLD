@@ -6,6 +6,10 @@ node 'master.puppet.vm' {
         ensure => file,
         content => "Welcome to ${fqdn}\n", 
     }
+    file { '/root/READMEALSO':
+        ensure => file,
+        content => "I am ${os.family}\n",
+    }
 }
 
 node 'minetest.puppet.vm' {
