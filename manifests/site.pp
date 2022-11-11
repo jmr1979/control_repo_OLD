@@ -8,7 +8,7 @@ node 'master.puppet.vm' {
     }
     file { '/root/READMEALSO':
         ensure => file,
-        content => "I am ${os.family}\n",
+        content => "I am ${::os['family']}\n",
     }
 }
 
